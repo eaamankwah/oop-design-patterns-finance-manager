@@ -1,4 +1,4 @@
-# OOP Design Patterns Financial Manager
+# Finance OOP Patterns
 
 ## Freelancer Personal Finance Manager
 
@@ -156,29 +156,32 @@ Patterns 1-3 are the fundamental patterns required by the underlying project spe
 ## Project Structure
 
 ```
-./
-├── main.py                                 # Composition root: wires every pattern together
-├── README.md                               # This file
-|── doc
-|   ├── Freelancer_Finance_Manager_Report.pdf  # Full 29-page technical report
+finance-oop-patterns/
 ├── balance/
-│   ├── balance.py                          # Singleton Balance (Observer subject)
-│   ├── balance_observer.py                 # Observer interface + concrete observers
+│   ├── balance.py
+│   ├── balance_observer.py
 │   ├── test_balance.py
 │   └── test_balance_observer.py
+├── budget/
+│   ├── budget_strategy.py
+│   └── test_budget_strategy.py
+├── doc/                             
+│   └── Freelancer_Finance_Manager_Report.pdf
 ├── transaction/
-│   ├── transaction.py                      # Transaction value object + TransactionCategory enum
-│   ├── transaction_adapter.py              # Adapter pattern
-│   ├── external_income_transaction.py      # Third-party data shape being adapted
-│   ├── transaction_command.py              # Command pattern (undo / redo)
-│   ├── transaction_decorator.py            # Decorator pattern (validation + logging)
+│   ├── external_income_transaction.py
 │   ├── test_transaction.py
 │   ├── test_transaction_adapter.py
 │   ├── test_transaction_command.py
-│   └── test_transaction_decorator.py
-└── budget/
-    ├── budget_strategy.py                  # Strategy pattern (budget planning)
-    └── test_budget_strategy.py
+│   ├── test_transaction_decorator.py
+│   ├── transaction.py
+│   ├── transaction_adapter.py
+│   ├── transaction_command.py
+│   └── transaction_decorator.py
+├── .gitignore
+├── LICENSE
+├── README.md
+└── main.py
+
 ```
 
 ## Requirements
